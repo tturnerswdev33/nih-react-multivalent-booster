@@ -1,0 +1,37 @@
+{
+  "name": "cdc-viz-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@cdc/chart": "^4.25.3",
+    "@cdc/core": "^4.25.3",
+    "@cdc/map": "^4.25.3",
+    "ag-grid-community": "^33.3.0",
+    "ag-grid-react": "^33.3.0",
+    "bootstrap": "4.6",
+    "lucide-react": "^0.511.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/papaparse": "^5.3.16",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.5"
+  }
+}
