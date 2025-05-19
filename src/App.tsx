@@ -3,6 +3,8 @@ import { AgGridReact } from 'ag-grid-react';
 import { ModuleRegistry } from 'ag-grid-community';
 import type { ColDef } from 'ag-grid-community';
 import type { ValueFormatterParams } from 'ag-grid-community';
+import type { ICellRendererParams } from 'ag-grid-community';
+
 import {
   ClientSideRowModelModule,
   PaginationModule,
@@ -239,25 +241,25 @@ const Footer = () => (
     </footer>
 );
 
-  const ExternalLinkRenderer = ({ value }) => {
-    if (!value) return null;
-    return (
-      <a
-        href={value}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          color: '#007bff',
-          display: 'flex',
-          alignItems: 'center',
-          gap: '0.25rem',
-          textDecoration: 'none'
-        }}
-      >
-        Link <ExternalLink size={16} strokeWidth={2} />
-      </a>
-    );
-  };
+const ExternalLinkRenderer = ({ value }: ICellRendererParams) => {
+  if (!value) return null;
+  return (
+    <a
+      href={value}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: '#007bff',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.25rem',
+        textDecoration: 'none'
+      }}
+    >
+      Link <ExternalLink size={16} strokeWidth={2} />
+    </a>
+  );
+};
 
   const toggleExpand = key => {
     setExpanded(prev => ({ ...prev, [key]: !prev[key] }));
