@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import { ModuleRegistry } from 'ag-grid-community';
 import type { ColDef } from 'ag-grid-community';
@@ -99,7 +99,8 @@ interface BoosterRow {
   data_source_type: string;
   sample_source: string;
   vac_prime: string;
-  vac_boost1: string;
+  vac_boost: string;
+  infection_history: string;
   boost1_class: string;
   assay_cat: string;
   assay_type: string;
